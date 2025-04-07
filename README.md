@@ -19,6 +19,26 @@ This project provides a fully automated AWS infrastructure setup using Terraform
 - **AWS**
 - (Optional) **GitHub Actions** for CI/CD
 
+## 🌐 Networking Details:
+
+### 🔸 VPC Configuration
+- **VPC CIDR Block**: `10.0.0.0/16`
+
+### 🔸 Subnet Allocation
+- **Public Subnets**:
+  - `10.0.1.0/24`
+  - `10.0.2.0/24`
+- **Private Subnets**:
+  - `10.0.3.0/24`
+  - `10.0.4.0/24`
+
+### 🔸 Subnetting Strategy
+- Each subnet is deployed in a separate **Availability Zone** for high availability.
+- **Public subnets** are connected to an **Internet Gateway** for inbound and outbound internet access.
+- **Private subnets** route traffic through a **NAT Gateway** for secure outbound access to the internet.
+- **Route Tables** are configured to control traffic flow and ensure proper isolation between public and private subnets.
+
+
 
 
 
