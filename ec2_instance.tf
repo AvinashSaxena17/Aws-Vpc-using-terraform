@@ -11,7 +11,7 @@ data "aws_subnet" "public_subnet" {
 
 resource "aws_key_pair" "deployement_key_pair" {
   key_name   = "aws_key"
-  public_key = file("${path.module}/aws_ap_south_key.pub")
+  public_key = file("${path.module}/YOUR_SSH_KEY")
 }
 
 resource "aws_instance" "ec2-instance" {
